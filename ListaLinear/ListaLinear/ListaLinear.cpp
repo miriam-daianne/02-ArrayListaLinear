@@ -1,4 +1,4 @@
-// Claudio Souza Nunes
+// Míriam Daianne
 
 #include <iostream>
 using namespace std;
@@ -105,5 +105,25 @@ void inserirElemento()
 // deve ser implementada como resposta ao exercicio
 void buscarElemento()
 {
+	int elemento = 0;
+	int indiceEncontrado = -1;
 
+	cout << "Digite um número: " ;
+	cin >> elemento;
+
+	for (int i = 0; i < MAX; ++i) {
+		if (lista[i] == elemento) {
+			indiceEncontrado = i;
+			break;
+		}
+	}
+
+	if (indiceEncontrado != -1) {
+		cout << "O numero " << elemento << " foi encontrado na lista no indice " << indiceEncontrado << endl;
+
+	}
+	
+	else {
+		cout << "O numero " << elemento << " nao foi encontrado na lista" << endl;
+	}
 }
